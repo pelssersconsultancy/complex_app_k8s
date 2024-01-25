@@ -10,3 +10,30 @@ $ kubectl set image <object_type>/<object_name> <container_name>=<new_image_to_u
 $ kubectl set image deployment/client-deployment client=robbypelssers/multi-react:v5
 
 $ kubectl rollout restart -f client-deployment.yaml
+
+# apply all kubernetes config files in the 'k8s' folder
+
+$ kubectl apply -f k8s
+
+# Get logs from a pod
+
+$ kubectl logs <pod_name>
+
+kubectl get deployments
+kubectl get pods
+kubectl get services
+kubectl get pv
+kubectl get pvc
+kubectl get secrets
+
+# Create a secret
+
+$ kubectl create secret generic <secret_name> --from-literal key=value
+E.G.
+kubectl create secret generic pgpassword --from-literal PG_PASSWORD=my_password
+
+We will be using
+https://github.com/kubernetes/ingress-nginx
+
+and NOT
+https://github.com/nginxinc/kubernetes-ingress
