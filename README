@@ -44,3 +44,27 @@ https://www.joyfulbikeshedding.com/blog/2018-03-26-studying-the-kubernetes-ingre
 https://www.blueshoe.io/blog/docker-desktop-and-kubernetes/
 
 this setup will run the app and nginx is available on http://localhost:80 or https://localhost:443
+
+# Useful links
+
+https://dev.to/docker/9-docker-extensions-every-developer-must-try-1no2
+
+https://www.localstack.cloud/
+
+# Kubernetes dashboard
+
+https://kubernetes.io/docs/tasks/access-application-cluster/web-ui-dashboard/#deploying-the-dashboard-ui
+
+$ kubectl apply -f https://raw.githubusercontent.com/kubernetes/dashboard/v2.7.0/aio/deploy/recommended.yaml
+
+Create user and cluster role
+https://github.com/kubernetes/dashboard/blob/master/docs/user/access-control/creating-sample-user.md
+
+See dashboard-admin-user.yaml and dashboard-clusterrole.yaml
+
+Next get the token for the admin-user
+$ kubectl -n kubernetes-dashboard create token admin-user
+
+$ kubectl proxy
+
+Now dashboard is available at http://localhost:8001/api/v1/namespaces/kubernetes-dashboard/services/https:kubernetes-dashboard:/proxy/.
