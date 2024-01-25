@@ -37,3 +37,10 @@ https://github.com/kubernetes/ingress-nginx
 
 and NOT
 https://github.com/nginxinc/kubernetes-ingress
+
+Nice to read
+https://www.joyfulbikeshedding.com/blog/2018-03-26-studying-the-kubernetes-ingress-system.html
+
+https://www.blueshoe.io/blog/docker-desktop-and-kubernetes/
+
+this setup will run the app and nginx is available on http://localhost:80 or https://localhost:443
